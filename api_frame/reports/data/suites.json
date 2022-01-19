@@ -1,0 +1,172 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "testcases.product_manage",
+    "children" : [ {
+      "name" : "test_product_api",
+      "children" : [ {
+        "name" : "TestProductApi",
+        "children" : [ {
+          "name" : "成功获取token鉴权码",
+          "uid" : "6f31f14f3d7fb50e",
+          "parentUid" : "93c8da45d1b1035549224eff5dc021cc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922051435,
+            "stop" : 1639922051788,
+            "duration" : 353
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '成功获取token鉴权码', 'base_url': '${read_config(base,base_spgl_url)}', 'parameterize': {'name-appid-secret-grant_type-assert_str': '/datas/product_manage/get_token_data.yaml'}, 'request': {'method': 'get', 'url': '/cgi-bin/token', 'params': {'appid': 'wx8a9de038e93f77ab', 'secret': '8326fc915928dee3165720c910effb86', 'grant_type': 'client_credential'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '\"expires_in\":(.*?)}'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'access_token'}]}" ]
+        }, {
+          "name" : "检查appid为空",
+          "uid" : "a5c7f5ec1ba4622d",
+          "parentUid" : "93c8da45d1b1035549224eff5dc021cc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922051796,
+            "stop" : 1639922051850,
+            "duration" : 54
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '检查appid为空', 'base_url': '${read_config(base,base_spgl_url)}', 'parameterize': {'name-appid-secret-grant_type-assert_str': '/datas/product_manage/get_token_data.yaml'}, 'request': {'method': 'get', 'url': '/cgi-bin/token', 'params': {'appid': '', 'secret': '8326fc915928dee3165720c910effb86', 'grant_type': 'client_credential'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '\"expires_in\":(.*?)}'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 41002}]}" ]
+        }, {
+          "name" : "检查secret为空",
+          "uid" : "fcd0d89a3b9f36e9",
+          "parentUid" : "93c8da45d1b1035549224eff5dc021cc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922051858,
+            "stop" : 1639922051972,
+            "duration" : 114
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '检查secret为空', 'base_url': '${read_config(base,base_spgl_url)}', 'parameterize': {'name-appid-secret-grant_type-assert_str': '/datas/product_manage/get_token_data.yaml'}, 'request': {'method': 'get', 'url': '/cgi-bin/token', 'params': {'appid': 'wx8a9de038e93f77ab', 'secret': '', 'grant_type': 'client_credential'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '\"expires_in\":(.*?)}'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 41004}]}" ]
+        }, {
+          "name" : "test_create_flag[caseinfo0]",
+          "uid" : "7da32d7d481913d9",
+          "parentUid" : "93c8da45d1b1035549224eff5dc021cc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922051978,
+            "stop" : 1639922052258,
+            "duration" : 280
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '创建标签接口', 'base_url': '${read_config(base,base_spgl_url)}', 'request': {'method': 'post', 'url': '/cgi-bin/tags/create?access_token=${read_extract_data(access_token)}', 'json': {'tag': {'name': '码尚教育${get_random_number(10000,99999)}'}}}, 'extract': {'tag_id': '$.tag.id'}, 'validate': [{'equals': {'status_code': 200}}]}" ]
+        }, {
+          "name" : "test_delete_flag[caseinfo0]",
+          "uid" : "226a1e713b464232",
+          "parentUid" : "93c8da45d1b1035549224eff5dc021cc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922052268,
+            "stop" : 1639922052483,
+            "duration" : 215
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '删除系统标签', 'base_url': '${read_config(base,base_spgl_url)}', 'parameterize': {'name-tag_id': '/datas/product_manage/delete_flag_data.yaml'}, 'request': {'method': 'post', 'url': '/cgi-bin/tags/delete?access_token=${read_extract_data(access_token)}', 'json': {'tag': {'id': 1}}}, 'validate': [{'equals': {'status_code': 200}}]}" ]
+        }, {
+          "name" : "test_select_flag[caseinfo0]",
+          "uid" : "a0c95867483ca5b0",
+          "parentUid" : "93c8da45d1b1035549224eff5dc021cc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922052491,
+            "stop" : 1639922052729,
+            "duration" : 238
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '查询标签接口', 'base_url': '${read_config(base,base_spgl_url)}', 'request': {'method': 'get', 'url': '/cgi-bin/tags/get?access_token=${read_extract_data(access_token)}'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'tags'}]}" ]
+        }, {
+          "name" : "test_file_upload[caseinfo0]",
+          "uid" : "9fea3bda1a1b3f94",
+          "parentUid" : "93c8da45d1b1035549224eff5dc021cc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922052739,
+            "stop" : 1639922053471,
+            "duration" : 732
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '文件上传接口', 'base_url': '${read_config(base,base_spgl_url)}', 'request': {'method': 'post', 'url': '/cgi-bin/media/uploadimg?access_token=${read_extract_data(access_token)}', 'files': {'media': 'E:\\\\shu.png'}}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'url'}]}" ]
+        } ],
+        "uid" : "93c8da45d1b1035549224eff5dc021cc"
+      } ],
+      "uid" : "f9e12067adea4b00e488516df04499ea"
+    } ],
+    "uid" : "6aba0f1726141bd37afaab4f5ffa34f6"
+  }, {
+    "name" : "testcases.user_manage",
+    "children" : [ {
+      "name" : "test_new_api",
+      "children" : [ {
+        "name" : "TestUserApi",
+        "children" : [ {
+          "name" : "test_new[caseinfo0]",
+          "uid" : "e85467c7aeb1afce",
+          "parentUid" : "d04839ac4d342d5b2af8865216817995",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922053482,
+            "stop" : 1639922053701,
+            "duration" : 219
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '查询网易新闻', 'base_url': '${read_config(base,base_wyxw_url)}', 'request': {'method': 'post', 'url': '/getWangYiNews', 'data': {'page': 1, 'count': 5}}, 'validate': [{'equals': {'status_code': 200}}]}" ]
+        }, {
+          "name" : "test_md5[caseinfo0]",
+          "uid" : "6f98bb34ff411a4d",
+          "parentUid" : "d04839ac4d342d5b2af8865216817995",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922053708,
+            "stop" : 1639922053723,
+            "duration" : 15
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '测试MD5加密接口', 'base_url': '${read_config(base,base_md5_url)}', 'request': {'method': 'post', 'url': '/md5login', 'data': {'username': '${md5(admin)}', 'password': '${md5(123)}'}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'message': 'success'}}]}" ]
+        }, {
+          "name" : "test_base64[caseinfo0]",
+          "uid" : "1da84be580aec1d3",
+          "parentUid" : "d04839ac4d342d5b2af8865216817995",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922053731,
+            "stop" : 1639922053743,
+            "duration" : 12
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '测试Base64加密接口', 'base_url': '${read_config(base,base_md5_url)}', 'request': {'method': 'post', 'url': '/base64login', 'data': {'username': '${bs64(admin)}', 'password': '${bs64(123)}'}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'message': 'success'}}]}" ]
+        }, {
+          "name" : "test_sign[caseinfo0]",
+          "uid" : "45ca99d78c0d757",
+          "parentUid" : "d04839ac4d342d5b2af8865216817995",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639922053750,
+            "stop" : 1639922053774,
+            "duration" : 24
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'name': '测试SIGN签名接口', 'base_url': '${read_config(base,base_md5_url)}', 'request': {'method': 'post', 'url': '/md5login?a=1&b=2', 'headers': {'sign': '${signs(/testcases/user_manage/sign.yaml)}'}, 'params': {'www': 'qqq'}, 'data': {'username': '${md5(admin)}', 'password': '${md5(123)}'}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'message': 'success'}}]}" ]
+        } ],
+        "uid" : "d04839ac4d342d5b2af8865216817995"
+      } ],
+      "uid" : "9d842a0c4c96dc9a587aebd5abb867c7"
+    } ],
+    "uid" : "18d9d623b937cb62ab917fedfadc56a9"
+  } ]
+}

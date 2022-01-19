@@ -1,0 +1,159 @@
+[2021-12-16 21:38:08,486] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:38:08,487] logger_util.py->logs line:72 [INFO] 接口名称：查询网易新闻
+[2021-12-16 21:38:08,487] logger_util.py->logs line:72 [INFO] 请求方式：post
+[2021-12-16 21:38:08,488] logger_util.py->logs line:72 [INFO] 请求路径：https://api.apiopen.tophttps://api.apiopen.top/getWangYiNews
+[2021-12-16 21:38:08,488] logger_util.py->logs line:72 [INFO] 请求data参数：{'page': 1, 'count': 5}
+[2021-12-16 21:38:08,614] logger_util.py->error_log line:67 [ERROR] 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\python373\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.apiopen.tophttps', port=443): Max retries exceeded with url: //api.apiopen.top/getWangYiNews (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 136, in send_request
+    res = RequestsUtil.session.request(method,url,**kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.apiopen.tophttps', port=443): Max retries exceeded with url: //api.apiopen.top/getWangYiNews (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+[2021-12-16 21:38:08,616] logger_util.py->error_log line:67 [ERROR] 规范YAML测试用例standard_yaml异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\python373\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.apiopen.tophttps', port=443): Max retries exceeded with url: //api.apiopen.top/getWangYiNews (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 136, in send_request
+    res = RequestsUtil.session.request(method,url,**kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.apiopen.tophttps', port=443): Max retries exceeded with url: //api.apiopen.top/getWangYiNews (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 74, in standard_yaml
+    res = self.send_request(name,method,base_url+url,**caseinfo['request'])
+  File "E:\workspace\api_frame\commons\requests_util.py", line 139, in send_request
+    error_log("发送请求send_request异常：%s" % str(traceback.format_exc()))
+  File "E:\workspace\api_frame\commons\logger_util.py", line 68, in error_log
+    raise Exception(message)
+Exception: 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\python373\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.apiopen.tophttps', port=443): Max retries exceeded with url: //api.apiopen.top/getWangYiNews (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 136, in send_request
+    res = RequestsUtil.session.request(method,url,**kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.apiopen.tophttps', port=443): Max retries exceeded with url: //api.apiopen.top/getWangYiNews (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000000049A8908>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+

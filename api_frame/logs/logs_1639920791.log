@@ -1,0 +1,215 @@
+[2021-12-19 21:33:11,337] logger_util.py->logs line:73 [INFO] ----------接口测试开始----------
+[2021-12-19 21:33:11,340] logger_util.py->logs line:73 [INFO] 接口名称：查询网易新闻
+[2021-12-19 21:33:11,340] logger_util.py->logs line:73 [INFO] 请求方式：post
+[2021-12-19 21:33:11,340] logger_util.py->logs line:73 [INFO] 请求路径：https://api.apiopen.top/getWangYiNews
+[2021-12-19 21:33:11,340] logger_util.py->logs line:73 [INFO] 请求data参数：{'page': 1, 'count': 5}
+[2021-12-19 21:33:11,508] logger_util.py->logs line:73 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2021-12-19 21:33:11,508] logger_util.py->logs line:73 [INFO] 实际结果：{'code': 200, 'message': '成功!', 'result': [{'path': 'https://www.163.com/dy/article/G1OBC8LO0514BCL4.html', 'image': 'http://dingyue.ws.126.net/2021/0201/b63f2e50j00qntwfh0020c000hs00npg.jpg?imageView&thumbnail=140y88&quality=85', 'title': '被指偷拿半卷卫生纸 63岁女洗碗工服药自杀 酒店回应', 'passtime': '2021-02-02 10:00:51'}, {'path': 'https://www.163.com/dy/article/G1O1Q9Q2053469M5.html', 'image': 'http://cms-bucket.ws.126.net/2021/0201/9860dbd3p00qntxlo00iqc000s600e3c.png?imageView&thumbnail=140y88&quality=85', 'title': '警方通报＂19岁女大学生学车后失联＂:已遇害 全力侦办', 'passtime': '2021-02-02 10:00:51'}, {'path': 'https://news.163.com/21/0201/10/G1OAFSJR0001899O.html', 'image': 'http://cms-bucket.ws.126.net/2021/0201/9c211c79p00qnu1ff00h8c000s600e3c.png?imageView&thumbnail=140y88&quality=85', 'title': '缅军方接管政权 副总统敏瑞任代总统 白宫紧急回应', 'passtime': '2021-02-02 10:00:51'}, {'path': 'https://www.163.com/dy/article/G1QQ2KIT051482MP.html', 'image': 'http://bjnewsrec-cv.ws.126.net/little61377fe4179p00qnvo3n00ded200u000fwg00it009y.jpg?imageView&thumbnail=140y88&quality=85', 'title': '孙小果母亲讲述经历：＂我老公从没有没办成的事儿＂', 'passtime': '2021-02-02 10:00:50'}, {'path': 'https://www.163.com/dy/article/G1QLGSGT0514BE2Q.html', 'image': 'http://dingyue.ws.126.net/2021/0202/25b0f9dcj00qnvkdk002fc000u000k3m.jpg?imageView&thumbnail=140y88&quality=85', 'title': '安徽名酒产地地下水告急：打井五六百米才出水', 'passtime': '2021-02-02 10:00:50'}]}
+[2021-12-19 21:33:11,508] logger_util.py->logs line:73 [INFO] 接口测试成功
+[2021-12-19 21:33:11,508] logger_util.py->logs line:73 [INFO] ----------接口测试结束----------
+
+[2021-12-19 21:33:11,514] logger_util.py->logs line:73 [INFO] ----------接口测试开始----------
+[2021-12-19 21:33:11,516] logger_util.py->logs line:73 [INFO] 接口名称：测试MD5加密接口
+[2021-12-19 21:33:11,516] logger_util.py->logs line:73 [INFO] 请求方式：post
+[2021-12-19 21:33:11,516] logger_util.py->logs line:73 [INFO] 请求路径：http://127.0.0.1:5000/md5login
+[2021-12-19 21:33:11,516] logger_util.py->logs line:73 [INFO] 请求data参数：{'username': '21232F297A57A5A743894A0E4A801FC3', 'password': '202CB962AC59075B964B07152D234B70'}
+[2021-12-19 21:33:12,572] logger_util.py->error_log line:68 [ERROR] 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\python373\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\python373\lib\http\client.py", line 956, in send
+    self.connect()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004971EF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /md5login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000004971EF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 136, in send_request
+    res = RequestsUtil.session.request(method,url,**kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /md5login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000004971EF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+[2021-12-19 21:33:12,574] logger_util.py->error_log line:68 [ERROR] 规范YAML测试用例standard_yaml异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 75, in standard_yaml
+    return_text = res.text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+[2021-12-19 21:33:12,581] logger_util.py->logs line:73 [INFO] ----------接口测试开始----------
+[2021-12-19 21:33:12,597] logger_util.py->logs line:73 [INFO] 接口名称：测试Base64加密接口
+[2021-12-19 21:33:12,598] logger_util.py->logs line:73 [INFO] 请求方式：post
+[2021-12-19 21:33:12,598] logger_util.py->logs line:73 [INFO] 请求路径：http://127.0.0.1:5000/base64login
+[2021-12-19 21:33:12,598] logger_util.py->logs line:73 [INFO] 请求data参数：{'username': 'YWRTAW4=', 'password': 'MTIZ'}
+[2021-12-19 21:33:13,646] logger_util.py->error_log line:68 [ERROR] 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\python373\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\python373\lib\http\client.py", line 956, in send
+    self.connect()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000049D5DD8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /base64login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000049D5DD8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 136, in send_request
+    res = RequestsUtil.session.request(method,url,**kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /base64login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000049D5DD8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+[2021-12-19 21:33:13,650] logger_util.py->error_log line:68 [ERROR] 规范YAML测试用例standard_yaml异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 75, in standard_yaml
+    return_text = res.text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+[2021-12-19 21:33:13,661] logger_util.py->logs line:73 [INFO] ----------接口测试开始----------
+[2021-12-19 21:33:13,674] logger_util.py->logs line:73 [INFO] 接口名称：测试SIGN签名接口
+[2021-12-19 21:33:13,674] logger_util.py->logs line:73 [INFO] 请求方式：post
+[2021-12-19 21:33:13,674] logger_util.py->logs line:73 [INFO] 请求路径：http://127.0.0.1:5000/md5login?a=1&b=2
+[2021-12-19 21:33:13,675] logger_util.py->logs line:73 [INFO] 请求头：{'sign': 'None'}
+[2021-12-19 21:33:13,675] logger_util.py->logs line:73 [INFO] 请求params参数：{'www': 'qqq'}
+[2021-12-19 21:33:14,679] logger_util.py->error_log line:68 [ERROR] 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\python373\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\python373\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\python373\lib\http\client.py", line 956, in send
+    self.connect()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000049710F0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\workspace\api_frame\venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /md5login?a=1&b=2&www=qqq (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000049710F0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 136, in send_request
+    res = RequestsUtil.session.request(method,url,**kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\workspace\api_frame\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /md5login?a=1&b=2&www=qqq (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000049710F0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+[2021-12-19 21:33:14,691] logger_util.py->error_log line:68 [ERROR] 规范YAML测试用例standard_yaml异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 75, in standard_yaml
+    return_text = res.text
+AttributeError: 'NoneType' object has no attribute 'text'
+

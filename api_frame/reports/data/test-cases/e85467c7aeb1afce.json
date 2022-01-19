@@ -1,0 +1,129 @@
+{
+  "uid" : "e85467c7aeb1afce",
+  "name" : "test_new[caseinfo0]",
+  "fullName" : "testcases.user_manage.test_new_api.TestUserApi#test_new",
+  "historyId" : "310ec909745179dbf7608ffe87882b1c",
+  "time" : {
+    "start" : 1639922053482,
+    "stop" : 1639922053701,
+    "duration" : 219
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051434,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "fa4013b1bd7340fa",
+      "name" : "log",
+      "source" : "fa4013b1bd7340fa.txt",
+      "type" : "text/plain",
+      "size" : 2188
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "网易新闻接口"
+  }, {
+    "name" : "epic",
+    "value" : "微信公众号接口自动化测试平台"
+  }, {
+    "name" : "feature",
+    "value" : "用户管理模块"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcases.user_manage"
+  }, {
+    "name" : "suite",
+    "value" : "test_new_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUserApi"
+  }, {
+    "name" : "host",
+    "value" : "PY151NA6KCKNTSK"
+  }, {
+    "name" : "thread",
+    "value" : "11584-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.user_manage.test_new_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "caseinfo",
+    "value" : "{'name': '查询网易新闻', 'base_url': '${read_config(base,base_wyxw_url)}', 'request': {'method': 'post', 'url': '/getWangYiNews', 'data': {'page': 1, 'count': 5}}, 'validate': [{'equals': {'status_code': 200}}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e85467c7aeb1afce.json",
+  "parameterValues" : [ "{'name': '查询网易新闻', 'base_url': '${read_config(base,base_wyxw_url)}', 'request': {'method': 'post', 'url': '/getWangYiNews', 'data': {'page': 1, 'count': 5}}, 'validate': [{'equals': {'status_code': 200}}]}" ]
+}

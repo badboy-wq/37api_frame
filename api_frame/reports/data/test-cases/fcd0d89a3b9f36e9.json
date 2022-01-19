@@ -1,0 +1,132 @@
+{
+  "uid" : "fcd0d89a3b9f36e9",
+  "name" : "检查secret为空",
+  "fullName" : "testcases.product_manage.test_product_api.TestProductApi#test_get_token",
+  "historyId" : "7eb9dfc7ca882c41e16552041da0be15",
+  "time" : {
+    "start" : 1639922051858,
+    "stop" : 1639922051972,
+    "duration" : 114
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051434,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8c5f10cbd6dd9b4a",
+      "name" : "log",
+      "source" : "8c5f10cbd6dd9b4a.txt",
+      "type" : "text/plain",
+      "size" : 753
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "微信公众号接口自动化测试平台"
+  }, {
+    "name" : "story",
+    "value" : "获取统一鉴权码接口"
+  }, {
+    "name" : "feature",
+    "value" : "商品管理模块"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcases.product_manage"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProductApi"
+  }, {
+    "name" : "host",
+    "value" : "PY151NA6KCKNTSK"
+  }, {
+    "name" : "thread",
+    "value" : "11584-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.product_manage.test_product_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "caseinfo",
+    "value" : "{'name': '检查secret为空', 'base_url': '${read_config(base,base_spgl_url)}', 'parameterize': {'name-appid-secret-grant_type-assert_str': '/datas/product_manage/get_token_data.yaml'}, 'request': {'method': 'get', 'url': '/cgi-bin/token', 'params': {'appid': 'wx8a9de038e93f77ab', 'secret': '', 'grant_type': 'client_credential'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '\"expires_in\":(.*?)}'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 41004}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "run(order=1)" ]
+  },
+  "source" : "fcd0d89a3b9f36e9.json",
+  "parameterValues" : [ "{'name': '检查secret为空', 'base_url': '${read_config(base,base_spgl_url)}', 'parameterize': {'name-appid-secret-grant_type-assert_str': '/datas/product_manage/get_token_data.yaml'}, 'request': {'method': 'get', 'url': '/cgi-bin/token', 'params': {'appid': 'wx8a9de038e93f77ab', 'secret': '', 'grant_type': 'client_credential'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '\"expires_in\":(.*?)}'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 41004}]}" ]
+}

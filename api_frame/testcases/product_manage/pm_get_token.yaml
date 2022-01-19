@@ -1,0 +1,18 @@
+-
+  name: $ddt{name}
+  base_url: ${read_config(base,base_spgl_url)}
+  parameterize:
+    name-appid-secret-grant_type-assert_str: /datas/product_manage/get_token_data.yaml
+  request:
+    method: get
+    url: /cgi-bin/token
+    params:
+      appid: $ddt{appid}
+      secret: $ddt{secret}
+      grant_type: $ddt{grant_type}
+  extract:
+    access_token: '"access_token":"(.*?)"'
+    expires_in: '"expires_in":(.*?)}'
+  validate:
+    - equals: {status_code: 200}
+    - contains: $ddt{assert_str}

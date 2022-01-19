@@ -1,0 +1,4 @@
+#DDT(data driver test)数据驱动YAML文件,对应的YAML测试用例文件为:pm_delete_flag.yaml
+- ['name','tag_id']
+#- ['删除创建的标签','${read_extract_data(tag_id)}']
+- ['删除系统标签',1]

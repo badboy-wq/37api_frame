@@ -1,0 +1,10 @@
+INFO     log:logger_util.py:73 ----------接口测试开始----------
+INFO     log:logger_util.py:73 接口名称：测试SIGN签名接口
+INFO     log:logger_util.py:73 请求方式：post
+INFO     log:logger_util.py:73 请求路径：http://127.0.0.1:5000/md5login?a=1&b=2
+INFO     log:logger_util.py:73 请求头：{'sign': 'E2BE9CC38F410B9A6F1E0563B0148B65'}
+INFO     log:logger_util.py:73 请求params参数：{'www': 'qqq'}
+INFO     log:logger_util.py:73 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'message': 'success'}}]
+INFO     log:logger_util.py:73 实际结果：{'message': 'success'}
+INFO     log:logger_util.py:73 接口测试成功
+INFO     log:logger_util.py:73 ----------接口测试结束----------

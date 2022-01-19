@@ -1,0 +1,126 @@
+{
+  "uid" : "45ca99d78c0d757",
+  "name" : "test_sign[caseinfo0]",
+  "fullName" : "testcases.user_manage.test_new_api.TestUserApi#test_sign",
+  "historyId" : "02a06eb5d7d8b1817c5cd5e7551ffe0e",
+  "time" : {
+    "start" : 1639922053750,
+    "stop" : 1639922053774,
+    "duration" : 24
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051434,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "6b851fb4856d7719",
+      "name" : "log",
+      "source" : "6b851fb4856d7719.txt",
+      "type" : "text/plain",
+      "size" : 735
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "微信公众号接口自动化测试平台"
+  }, {
+    "name" : "feature",
+    "value" : "用户管理模块"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcases.user_manage"
+  }, {
+    "name" : "suite",
+    "value" : "test_new_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUserApi"
+  }, {
+    "name" : "host",
+    "value" : "PY151NA6KCKNTSK"
+  }, {
+    "name" : "thread",
+    "value" : "11584-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.user_manage.test_new_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "caseinfo",
+    "value" : "{'name': '测试SIGN签名接口', 'base_url': '${read_config(base,base_md5_url)}', 'request': {'method': 'post', 'url': '/md5login?a=1&b=2', 'headers': {'sign': '${signs(/testcases/user_manage/sign.yaml)}'}, 'params': {'www': 'qqq'}, 'data': {'username': '${md5(admin)}', 'password': '${md5(123)}'}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'message': 'success'}}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "45ca99d78c0d757.json",
+  "parameterValues" : [ "{'name': '测试SIGN签名接口', 'base_url': '${read_config(base,base_md5_url)}', 'request': {'method': 'post', 'url': '/md5login?a=1&b=2', 'headers': {'sign': '${signs(/testcases/user_manage/sign.yaml)}'}, 'params': {'www': 'qqq'}, 'data': {'username': '${md5(admin)}', 'password': '${md5(123)}'}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'message': 'success'}}]}" ]
+}

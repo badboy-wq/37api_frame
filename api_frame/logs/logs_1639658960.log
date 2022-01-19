@@ -1,0 +1,16 @@
+[2021-12-16 20:49:20,655] logger_util.py->error_log line:67 [INFO] 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 112, in send_request
+    kwargs[key] = self.replace_value(value)
+  File "E:\workspace\api_frame\commons\requests_util.py", line 44, in replace_value
+    new_value = getattr(self.obj,func_name)(*args_value2)
+  File "E:\workspace\api_frame\debug_talk.py", line 16, in read_extract_data
+    return read_extract_yaml(key)
+  File "E:\workspace\api_frame\commons\yaml_util.py", line 14, in read_extract_yaml
+    return value[key]
+KeyError: 'tag_id'
+
+[2021-12-16 20:49:20,655] logger_util.py->error_log line:67 [INFO] 规范YAML测试用例standard_yaml异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 71, in standard_yaml
+    return_text = res.text
+AttributeError: 'NoneType' object has no attribute 'text'
+

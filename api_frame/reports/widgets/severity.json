@@ -1,0 +1,111 @@
+[ {
+  "uid" : "e85467c7aeb1afce",
+  "name" : "test_new[caseinfo0]",
+  "time" : {
+    "start" : 1639922053482,
+    "stop" : 1639922053701,
+    "duration" : 219
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1da84be580aec1d3",
+  "name" : "test_base64[caseinfo0]",
+  "time" : {
+    "start" : 1639922053731,
+    "stop" : 1639922053743,
+    "duration" : 12
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a5c7f5ec1ba4622d",
+  "name" : "检查appid为空",
+  "time" : {
+    "start" : 1639922051796,
+    "stop" : 1639922051850,
+    "duration" : 54
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6f98bb34ff411a4d",
+  "name" : "test_md5[caseinfo0]",
+  "time" : {
+    "start" : 1639922053708,
+    "stop" : 1639922053723,
+    "duration" : 15
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "226a1e713b464232",
+  "name" : "test_delete_flag[caseinfo0]",
+  "time" : {
+    "start" : 1639922052268,
+    "stop" : 1639922052483,
+    "duration" : 215
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fcd0d89a3b9f36e9",
+  "name" : "检查secret为空",
+  "time" : {
+    "start" : 1639922051858,
+    "stop" : 1639922051972,
+    "duration" : 114
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6f31f14f3d7fb50e",
+  "name" : "成功获取token鉴权码",
+  "time" : {
+    "start" : 1639922051435,
+    "stop" : 1639922051788,
+    "duration" : 353
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a0c95867483ca5b0",
+  "name" : "test_select_flag[caseinfo0]",
+  "time" : {
+    "start" : 1639922052491,
+    "stop" : 1639922052729,
+    "duration" : 238
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7da32d7d481913d9",
+  "name" : "test_create_flag[caseinfo0]",
+  "time" : {
+    "start" : 1639922051978,
+    "stop" : 1639922052258,
+    "duration" : 280
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "45ca99d78c0d757",
+  "name" : "test_sign[caseinfo0]",
+  "time" : {
+    "start" : 1639922053750,
+    "stop" : 1639922053774,
+    "duration" : 24
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9fea3bda1a1b3f94",
+  "name" : "test_file_upload[caseinfo0]",
+  "time" : {
+    "start" : 1639922052739,
+    "stop" : 1639922053471,
+    "duration" : 732
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

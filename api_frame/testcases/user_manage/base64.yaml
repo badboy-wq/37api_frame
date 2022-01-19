@@ -1,0 +1,12 @@
+-
+  name: 测试Base64加密接口
+  base_url: ${read_config(base,base_md5_url)}
+  request:
+    method: post
+    url: /base64login
+    data:
+      username: ${bs64(admin)}
+      password: ${bs64(123)}
+  validate:
+    - equals: {status_code: 200}
+    - equals: {message: success}

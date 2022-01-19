@@ -1,0 +1,51 @@
+[2021-12-16 20:52:51,479] logger_util.py->error_log line:67 [ERROR] 一级关键字必须要包含：name,request,validate
+[2021-12-16 20:52:51,479] logger_util.py->error_log line:67 [ERROR] 规范YAML测试用例standard_yaml异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 98, in standard_yaml
+    error_log("一级关键字必须要包含：name,request,validate")
+  File "E:\workspace\api_frame\commons\logger_util.py", line 68, in error_log
+    raise Exception(message)
+Exception: 一级关键字必须要包含：name,request,validate
+
+[2021-12-16 20:52:51,655] logger_util.py->error_log line:67 [ERROR] 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 112, in send_request
+    kwargs[key] = self.replace_value(value)
+  File "E:\workspace\api_frame\commons\requests_util.py", line 44, in replace_value
+    new_value = getattr(self.obj,func_name)(*args_value2)
+  File "E:\workspace\api_frame\debug_talk.py", line 16, in read_extract_data
+    return read_extract_yaml(key)
+  File "E:\workspace\api_frame\commons\yaml_util.py", line 14, in read_extract_yaml
+    return value[key]
+KeyError: 'tag_id'
+
+[2021-12-16 20:52:51,656] logger_util.py->error_log line:67 [ERROR] 规范YAML测试用例standard_yaml异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 112, in send_request
+    kwargs[key] = self.replace_value(value)
+  File "E:\workspace\api_frame\commons\requests_util.py", line 44, in replace_value
+    new_value = getattr(self.obj,func_name)(*args_value2)
+  File "E:\workspace\api_frame\debug_talk.py", line 16, in read_extract_data
+    return read_extract_yaml(key)
+  File "E:\workspace\api_frame\commons\yaml_util.py", line 14, in read_extract_yaml
+    return value[key]
+KeyError: 'tag_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 70, in standard_yaml
+    res = self.send_request(method,url,**caseinfo['request'])
+  File "E:\workspace\api_frame\commons\requests_util.py", line 120, in send_request
+    error_log("发送请求send_request异常：%s" % str(traceback.format_exc()))
+  File "E:\workspace\api_frame\commons\logger_util.py", line 68, in error_log
+    raise Exception(message)
+Exception: 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 112, in send_request
+    kwargs[key] = self.replace_value(value)
+  File "E:\workspace\api_frame\commons\requests_util.py", line 44, in replace_value
+    new_value = getattr(self.obj,func_name)(*args_value2)
+  File "E:\workspace\api_frame\debug_talk.py", line 16, in read_extract_data
+    return read_extract_yaml(key)
+  File "E:\workspace\api_frame\commons\yaml_util.py", line 14, in read_extract_yaml
+    return value[key]
+KeyError: 'tag_id'
+
+

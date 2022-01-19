@@ -1,0 +1,11 @@
+-
+  name: 查询网易新闻
+  base_url: ${read_config(base,base_wyxw_url)}
+  request:
+    method: post
+    url: /getWangYiNews
+    data:
+      page: 1
+      count: 5
+  validate:
+    - equals: {status_code: 200}

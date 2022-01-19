@@ -1,0 +1,16 @@
+-
+  name: 测试SIGN签名接口
+  base_url: ${read_config(base,base_md5_url)}
+  request:
+    method: post
+    url: /md5login?a=1&b=2
+    headers:
+      sign: ${signs(/testcases/user_manage/sign.yaml)}
+    params:
+      www: qqq
+    data:
+      username: ${md5(admin)}
+      password: ${md5(123)}
+  validate:
+    - equals: {status_code: 200}
+    - equals: {message: success}

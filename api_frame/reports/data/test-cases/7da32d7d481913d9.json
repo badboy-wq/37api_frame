@@ -1,0 +1,126 @@
+{
+  "uid" : "7da32d7d481913d9",
+  "name" : "test_create_flag[caseinfo0]",
+  "fullName" : "testcases.product_manage.test_product_api.TestProductApi#test_create_flag",
+  "historyId" : "92247146daa3981436bbba02b16896c6",
+  "time" : {
+    "start" : 1639922051978,
+    "stop" : 1639922052258,
+    "duration" : 280
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051434,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "7eebe8e72efc6aaa",
+      "name" : "log",
+      "source" : "7eebe8e72efc6aaa.txt",
+      "type" : "text/plain",
+      "size" : 834
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "微信公众号接口自动化测试平台"
+  }, {
+    "name" : "feature",
+    "value" : "商品管理模块"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcases.product_manage"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProductApi"
+  }, {
+    "name" : "host",
+    "value" : "PY151NA6KCKNTSK"
+  }, {
+    "name" : "thread",
+    "value" : "11584-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.product_manage.test_product_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "caseinfo",
+    "value" : "{'name': '创建标签接口', 'base_url': '${read_config(base,base_spgl_url)}', 'request': {'method': 'post', 'url': '/cgi-bin/tags/create?access_token=${read_extract_data(access_token)}', 'json': {'tag': {'name': '码尚教育${get_random_number(10000,99999)}'}}}, 'extract': {'tag_id': '$.tag.id'}, 'validate': [{'equals': {'status_code': 200}}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7da32d7d481913d9.json",
+  "parameterValues" : [ "{'name': '创建标签接口', 'base_url': '${read_config(base,base_spgl_url)}', 'request': {'method': 'post', 'url': '/cgi-bin/tags/create?access_token=${read_extract_data(access_token)}', 'json': {'tag': {'name': '码尚教育${get_random_number(10000,99999)}'}}}, 'extract': {'tag_id': '$.tag.id'}, 'validate': [{'equals': {'status_code': 200}}]}" ]
+}

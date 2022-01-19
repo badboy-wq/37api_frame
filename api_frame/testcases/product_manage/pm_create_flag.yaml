@@ -1,0 +1,11 @@
+-
+  name: 创建标签接口
+  base_url: ${read_config(base,base_spgl_url)}
+  request:
+    method: post
+    url: /cgi-bin/tags/create?access_token=${read_extract_data(access_token)}
+    json: {"tag":{"name":"码尚教育${get_random_number(10000,99999)}"}}
+  extract:
+    tag_id: $.tag.id
+  validate:
+    - equals: { status_code: 200 }

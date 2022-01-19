@@ -1,0 +1,9 @@
+-
+  name: 查询标签接口
+  base_url: ${read_config(base,base_spgl_url)}
+  request:
+    method: get
+    url: /cgi-bin/tags/get?access_token=${read_extract_data(access_token)}
+  validate:
+    - equals: { status_code: 200 }
+    - contains: tags

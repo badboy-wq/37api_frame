@@ -1,0 +1,126 @@
+{
+  "uid" : "226a1e713b464232",
+  "name" : "test_delete_flag[caseinfo0]",
+  "fullName" : "testcases.product_manage.test_product_api.TestProductApi#test_delete_flag",
+  "historyId" : "34cdb22d9a3c6705601b7cfa915b96bd",
+  "time" : {
+    "start" : 1639922052268,
+    "stop" : 1639922052483,
+    "duration" : 215
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051434,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1639922051433,
+      "stop" : 1639922051433,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "26a16148c9030572",
+      "name" : "log",
+      "source" : "26a16148c9030572.txt",
+      "type" : "text/plain",
+      "size" : 873
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "微信公众号接口自动化测试平台"
+  }, {
+    "name" : "feature",
+    "value" : "商品管理模块"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcases.product_manage"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProductApi"
+  }, {
+    "name" : "host",
+    "value" : "PY151NA6KCKNTSK"
+  }, {
+    "name" : "thread",
+    "value" : "11584-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.product_manage.test_product_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "caseinfo",
+    "value" : "{'name': '删除系统标签', 'base_url': '${read_config(base,base_spgl_url)}', 'parameterize': {'name-tag_id': '/datas/product_manage/delete_flag_data.yaml'}, 'request': {'method': 'post', 'url': '/cgi-bin/tags/delete?access_token=${read_extract_data(access_token)}', 'json': {'tag': {'id': 1}}}, 'validate': [{'equals': {'status_code': 200}}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "226a1e713b464232.json",
+  "parameterValues" : [ "{'name': '删除系统标签', 'base_url': '${read_config(base,base_spgl_url)}', 'parameterize': {'name-tag_id': '/datas/product_manage/delete_flag_data.yaml'}, 'request': {'method': 'post', 'url': '/cgi-bin/tags/delete?access_token=${read_extract_data(access_token)}', 'json': {'tag': {'id': 1}}}, 'validate': [{'equals': {'status_code': 200}}]}" ]
+}

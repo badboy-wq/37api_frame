@@ -1,0 +1,32 @@
+[2021-12-16 21:36:42,909] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:36:42,910] logger_util.py->error_log line:67 [ERROR] 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 112, in send_request
+    url = self.base_url + self.replace_value(url)
+  File "E:\workspace\api_frame\commons\requests_util.py", line 44, in replace_value
+    new_value = getattr(self.obj,func_name)(*args_value2)
+TypeError: read_config() takes 2 positional arguments but 3 were given
+
+[2021-12-16 21:36:42,911] logger_util.py->error_log line:67 [ERROR] 规范YAML测试用例standard_yaml异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 112, in send_request
+    url = self.base_url + self.replace_value(url)
+  File "E:\workspace\api_frame\commons\requests_util.py", line 44, in replace_value
+    new_value = getattr(self.obj,func_name)(*args_value2)
+TypeError: read_config() takes 2 positional arguments but 3 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 74, in standard_yaml
+    res = self.send_request(name,method,base_url+url,**caseinfo['request'])
+  File "E:\workspace\api_frame\commons\requests_util.py", line 139, in send_request
+    error_log("发送请求send_request异常：%s" % str(traceback.format_exc()))
+  File "E:\workspace\api_frame\commons\logger_util.py", line 68, in error_log
+    raise Exception(message)
+Exception: 发送请求send_request异常：Traceback (most recent call last):
+  File "E:\workspace\api_frame\commons\requests_util.py", line 112, in send_request
+    url = self.base_url + self.replace_value(url)
+  File "E:\workspace\api_frame\commons\requests_util.py", line 44, in replace_value
+    new_value = getattr(self.obj,func_name)(*args_value2)
+TypeError: read_config() takes 2 positional arguments but 3 were given
+
+

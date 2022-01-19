@@ -1,0 +1,88 @@
+[2021-12-16 21:19:01,654] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:01,655] logger_util.py->logs line:72 [INFO] 接口名称：成功获取token鉴权码
+[2021-12-16 21:19:01,655] logger_util.py->logs line:72 [INFO] 请求方式：get
+[2021-12-16 21:19:01,656] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/token
+[2021-12-16 21:19:01,656] logger_util.py->logs line:72 [INFO] 请求params参数：{'appid': 'wx8a9de038e93f77ab', 'secret': '8326fc915928dee3165720c910effb86', 'grant_type': 'client_credential'}
+[2021-12-16 21:19:01,974] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'access_token'}]
+[2021-12-16 21:19:01,974] logger_util.py->logs line:72 [INFO] 实际结果：{'access_token': '52_jll_cBLaEmW_3climHmiBxTyYy17W_6aKZrWfC68kulDHq7tKmYoiIjQA59EWjSIZqhdHN5_ha4rFMpgTK5KJLmfpAQTz9H5dkBLGU5-SNUD5wD2dQrCJvX7WKRFxDCXq8p6ceImqs7hErAJOLIaACAKHE', 'expires_in': 7200}
+[2021-12-16 21:19:01,975] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:01,975] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+
+[2021-12-16 21:19:01,983] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:01,983] logger_util.py->logs line:72 [INFO] 接口名称：检查appid为空
+[2021-12-16 21:19:01,984] logger_util.py->logs line:72 [INFO] 请求方式：get
+[2021-12-16 21:19:01,984] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/token
+[2021-12-16 21:19:01,984] logger_util.py->logs line:72 [INFO] 请求params参数：{'appid': '', 'secret': '8326fc915928dee3165720c910effb86', 'grant_type': 'client_credential'}
+[2021-12-16 21:19:02,034] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 41002}]
+[2021-12-16 21:19:02,035] logger_util.py->logs line:72 [INFO] 实际结果：{'errcode': 41002, 'errmsg': 'appid missing rid: 61bb3cc4-1f85b2d7-69a5d75e'}
+[2021-12-16 21:19:02,035] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:02,035] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+
+[2021-12-16 21:19:02,049] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:02,051] logger_util.py->logs line:72 [INFO] 接口名称：检查secret为空
+[2021-12-16 21:19:02,052] logger_util.py->logs line:72 [INFO] 请求方式：get
+[2021-12-16 21:19:02,052] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/token
+[2021-12-16 21:19:02,053] logger_util.py->logs line:72 [INFO] 请求params参数：{'appid': 'wx8a9de038e93f77ab', 'secret': '', 'grant_type': 'client_credential'}
+[2021-12-16 21:19:02,151] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 41004}]
+[2021-12-16 21:19:02,151] logger_util.py->logs line:72 [INFO] 实际结果：{'errcode': 41004, 'errmsg': 'appsecret missing rid: 61bb3cc4-53c00271-7cedba6c'}
+[2021-12-16 21:19:02,151] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:02,151] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+
+[2021-12-16 21:19:02,158] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:02,160] logger_util.py->logs line:72 [INFO] 接口名称：创建标签接口
+[2021-12-16 21:19:02,161] logger_util.py->logs line:72 [INFO] 请求方式：post
+[2021-12-16 21:19:02,161] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/tags/create?access_token=52_jll_cBLaEmW_3climHmiBxTyYy17W_6aKZrWfC68kulDHq7tKmYoiIjQA59EWjSIZqhdHN5_ha4rFMpgTK5KJLmfpAQTz9H5dkBLGU5-SNUD5wD2dQrCJvX7WKRFxDCXq8p6ceImqs7hErAJOLIaACAKHE
+[2021-12-16 21:19:02,161] logger_util.py->logs line:72 [INFO] 请求json参数：{'tag': {'name': '码尚教育47948'}}
+[2021-12-16 21:19:02,408] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2021-12-16 21:19:02,409] logger_util.py->logs line:72 [INFO] 实际结果：{'tag': {'id': 189, 'name': '\\u7801\\u5c1a\\u6559\\u80b247948'}}
+[2021-12-16 21:19:02,409] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:02,409] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+
+[2021-12-16 21:19:02,417] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:02,419] logger_util.py->logs line:72 [INFO] 接口名称：删除创建的标签
+[2021-12-16 21:19:02,419] logger_util.py->logs line:72 [INFO] 请求方式：post
+[2021-12-16 21:19:02,420] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/tags/delete?access_token=52_jll_cBLaEmW_3climHmiBxTyYy17W_6aKZrWfC68kulDHq7tKmYoiIjQA59EWjSIZqhdHN5_ha4rFMpgTK5KJLmfpAQTz9H5dkBLGU5-SNUD5wD2dQrCJvX7WKRFxDCXq8p6ceImqs7hErAJOLIaACAKHE
+[2021-12-16 21:19:02,420] logger_util.py->logs line:72 [INFO] 请求json参数：{'tag': {'id': 189}}
+[2021-12-16 21:19:02,634] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2021-12-16 21:19:02,634] logger_util.py->logs line:72 [INFO] 实际结果：{'errcode': 0, 'errmsg': 'ok'}
+[2021-12-16 21:19:02,634] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:02,635] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+
+[2021-12-16 21:19:02,643] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:02,644] logger_util.py->logs line:72 [INFO] 接口名称：删除系统标签
+[2021-12-16 21:19:02,645] logger_util.py->logs line:72 [INFO] 请求方式：post
+[2021-12-16 21:19:02,646] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/tags/delete?access_token=52_jll_cBLaEmW_3climHmiBxTyYy17W_6aKZrWfC68kulDHq7tKmYoiIjQA59EWjSIZqhdHN5_ha4rFMpgTK5KJLmfpAQTz9H5dkBLGU5-SNUD5wD2dQrCJvX7WKRFxDCXq8p6ceImqs7hErAJOLIaACAKHE
+[2021-12-16 21:19:02,647] logger_util.py->logs line:72 [INFO] 请求json参数：{'tag': {'id': 1}}
+[2021-12-16 21:19:02,874] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2021-12-16 21:19:02,874] logger_util.py->logs line:72 [INFO] 实际结果：{'errcode': 45058, 'errmsg': "can't modify sys tag hint: [jkHFrOyWf-_iIjpA] rid: 61bb3cc5-1088f5d4-47024b4c"}
+[2021-12-16 21:19:02,874] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:02,874] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+
+[2021-12-16 21:19:02,881] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:02,882] logger_util.py->logs line:72 [INFO] 接口名称：查询标签接口
+[2021-12-16 21:19:02,883] logger_util.py->logs line:72 [INFO] 请求方式：get
+[2021-12-16 21:19:02,883] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/tags/get?access_token=52_jll_cBLaEmW_3climHmiBxTyYy17W_6aKZrWfC68kulDHq7tKmYoiIjQA59EWjSIZqhdHN5_ha4rFMpgTK5KJLmfpAQTz9H5dkBLGU5-SNUD5wD2dQrCJvX7WKRFxDCXq8p6ceImqs7hErAJOLIaACAKHE
+[2021-12-16 21:19:03,086] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'tags'}]
+[2021-12-16 21:19:03,087] logger_util.py->logs line:72 [INFO] 实际结果：{'tags': [{'id': 2, 'name': '星标组', 'count': 0}, {'id': 103, 'name': '\\u7801\\u5c1a\\u6559\\u80b220312', 'count': 0}, {'id': 113, 'name': '\\u7801\\u5c1a\\u6559\\u80b297938', 'count': 0}, {'id': 114, 'name': '\\u7801\\u5c1a\\u6559\\u80b230279', 'count': 0}, {'id': 151, 'name': '\\u7801\\u5c1a\\u6559\\u80b299551', 'count': 0}]}
+[2021-12-16 21:19:03,087] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:03,087] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+
+[2021-12-16 21:19:03,096] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:03,098] logger_util.py->logs line:72 [INFO] 接口名称：查询标签接口
+[2021-12-16 21:19:03,098] logger_util.py->logs line:72 [INFO] 请求方式：get
+[2021-12-16 21:19:03,098] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/tags/get?access_token=52_jll_cBLaEmW_3climHmiBxTyYy17W_6aKZrWfC68kulDHq7tKmYoiIjQA59EWjSIZqhdHN5_ha4rFMpgTK5KJLmfpAQTz9H5dkBLGU5-SNUD5wD2dQrCJvX7WKRFxDCXq8p6ceImqs7hErAJOLIaACAKHE
+[2021-12-16 21:19:03,288] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'tags'}]
+[2021-12-16 21:19:03,288] logger_util.py->logs line:72 [INFO] 实际结果：{'tags': [{'id': 2, 'name': '星标组', 'count': 0}, {'id': 103, 'name': '\\u7801\\u5c1a\\u6559\\u80b220312', 'count': 0}, {'id': 113, 'name': '\\u7801\\u5c1a\\u6559\\u80b297938', 'count': 0}, {'id': 114, 'name': '\\u7801\\u5c1a\\u6559\\u80b230279', 'count': 0}, {'id': 151, 'name': '\\u7801\\u5c1a\\u6559\\u80b299551', 'count': 0}]}
+[2021-12-16 21:19:03,289] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:03,289] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+
+[2021-12-16 21:19:03,299] logger_util.py->logs line:72 [INFO] ----------接口测试开始----------
+[2021-12-16 21:19:03,301] logger_util.py->logs line:72 [INFO] 接口名称：文件上传接口
+[2021-12-16 21:19:03,302] logger_util.py->logs line:72 [INFO] 请求方式：post
+[2021-12-16 21:19:03,302] logger_util.py->logs line:72 [INFO] 请求路径：https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token=52_jll_cBLaEmW_3climHmiBxTyYy17W_6aKZrWfC68kulDHq7tKmYoiIjQA59EWjSIZqhdHN5_ha4rFMpgTK5KJLmfpAQTz9H5dkBLGU5-SNUD5wD2dQrCJvX7WKRFxDCXq8p6ceImqs7hErAJOLIaACAKHE
+[2021-12-16 21:19:03,302] logger_util.py->logs line:72 [INFO] 文件上传：{'media': <_io.BufferedReader name='E:\\shu.png'>}
+[2021-12-16 21:19:04,041] logger_util.py->logs line:72 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'url'}]
+[2021-12-16 21:19:04,042] logger_util.py->logs line:72 [INFO] 实际结果：{'url': 'http://mmbiz.qpic.cn/mmbiz_png/gwVWn1TZHhX6YrD82JKbCZZIsFfb0KTEY4gkwWjLlsyns2ZUhibXnluibLJtj8enAopiaRhNTIJ8hH9udZPO0mD3A/0'}
+[2021-12-16 21:19:04,042] logger_util.py->logs line:72 [INFO] 接口测试成功
+[2021-12-16 21:19:04,042] logger_util.py->logs line:72 [INFO] ----------接口测试结束----------
+

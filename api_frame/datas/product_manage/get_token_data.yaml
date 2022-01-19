@@ -1,0 +1,5 @@
+#DDT(data driver test)数据驱动YAML文件,对应的YAML测试用例文件为:pm_get_token.yaml
+- ['name','appid','secret','grant_type','assert_str']
+- ['成功获取token鉴权码','wx8a9de038e93f77ab','8326fc915928dee3165720c910effb86','client_credential','access_token']
+- ['检查appid为空','','8326fc915928dee3165720c910effb86','client_credential',41002]
+- ['检查secret为空','wx8a9de038e93f77ab','','client_credential',41004]

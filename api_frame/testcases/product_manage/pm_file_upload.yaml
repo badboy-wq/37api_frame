@@ -1,0 +1,11 @@
+-
+  name: 文件上传接口
+  base_url: ${read_config(base,base_spgl_url)}
+  request:
+    method: post
+    url: /cgi-bin/media/uploadimg?access_token=${read_extract_data(access_token)}
+    files:
+      media: "E:\\shu.png"
+  validate:
+    - equals: { status_code: 200 }
+    - contains: url

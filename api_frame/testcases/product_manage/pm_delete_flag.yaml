@@ -1,0 +1,11 @@
+-
+  name: $ddt{name}
+  base_url: ${read_config(base,base_spgl_url)}
+  parameterize:
+    name-tag_id: /datas/product_manage/delete_flag_data.yaml
+  request:
+    method: post
+    url: /cgi-bin/tags/delete?access_token=${read_extract_data(access_token)}
+    json: {"tag":{"id":"$ddt{tag_id}"}}
+  validate:
+    - equals: { status_code: 200 }
